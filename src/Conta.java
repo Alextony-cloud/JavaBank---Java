@@ -26,7 +26,7 @@ public abstract class Conta {
 	}
 
 	public void setAgencia(int agencia) {
-		this.agencia = agencia;
+		this.agencia = agencia ;
 	}
 
 	@Override
