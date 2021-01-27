@@ -64,7 +64,7 @@ public class ContaPoupanca extends Conta {
 			outraConta.depositar(valor);
 			System.out.println("Você transferiu R$ " + valor + " para sua conta corrente");
 		} else {
-			System.out.println("Não poderá transferir valor maior que o saldo");
+			System.out.println("Saldo insuficiente para efetuar transferência");
 		}
 
 	}

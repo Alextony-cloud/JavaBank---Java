@@ -1,4 +1,3 @@
-import java.util.Random;
 
 public class ContaCorrente extends Conta {
 	private float saldoContaCorrente;
@@ -77,7 +76,7 @@ public class ContaCorrente extends Conta {
 			outraConta.depositar(valor);
 			System.out.println("Você transferiu R$ " + valor + " para sua conta poupança");
 		} else {
-			System.out.println("Saldo insuficiente para efetuar transferência ");
+			System.out.println("Saldo insuficiente para efetuar transferência");
 		}
 
 	}

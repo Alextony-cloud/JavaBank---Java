@@ -4,7 +4,6 @@ public abstract class Conta {
 	private int agencia;
 	private boolean contaAtiva = false;
 
-	// Metodos abstratos que terão que ser implementados pelas classes filhas
 	public abstract void abrirConta();
 
 	public abstract void fecharConta();
