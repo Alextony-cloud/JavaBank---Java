@@ -13,6 +13,8 @@ public abstract class Conta {
 
 	public abstract void depositar(float valor);
 
+	public abstract void transferir(Conta outraConta, float valor);
+
 	public int getNumero() {
 		return numero;
 	}
@@ -26,7 +28,7 @@ public abstract class Conta {
 	}
 
 	public void setAgencia(int agencia) {
-		this.agencia = agencia ;
+		this.agencia = agencia;
 	}
 
 	@Override

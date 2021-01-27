@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class ContaCorrente extends Conta {
 	private float saldoContaCorrente;
@@ -12,11 +13,14 @@ public class ContaCorrente extends Conta {
 	}
 
 	public float getSaldoContaCorrente() {
+		System.out.println("Você possui R$ " + this.saldoContaCorrente + " na conta corrente");
 		return saldoContaCorrente;
 	}
 
 	public void setSaldoContaCorrente(float saldoContaCorrente) {
+
 		this.saldoContaCorrente = saldoContaCorrente;
+
 	}
 
 	@Override
@@ -29,6 +33,9 @@ public class ContaCorrente extends Conta {
 		if (this.getContaAtiva() == false) {
 			System.out.println("Seja bem vindo! " + "sua Conta Corrente está aberta");
 			this.setContaAtiva(true);
+			this.setAgencia(15894);
+			this.setNumero(145);
+			this.setSaldoContaCorrente(0);
 		} else {
 			System.err.println("Conta já está aberta");
 		}
@@ -49,6 +56,7 @@ public class ContaCorrente extends Conta {
 	public void sacar(float valor) {
 		if (valor <= this.saldoContaCorrente) {
 			this.saldoContaCorrente = saldoContaCorrente - valor;
+			System.out.println("Você sacou R$ " + valor + " da sua conta corrente");
 		} else {
 			System.err.println("Saldo insuficiente");
 		}
@@ -58,6 +66,19 @@ public class ContaCorrente extends Conta {
 	@Override
 	public void depositar(float valor) {
 		this.saldoContaCorrente = saldoContaCorrente + valor;
+		System.out.println("Você depositou R$ " + valor + " na sua conta corrente");
+
+	}
+
+	@Override
+	public void transferir(Conta outraConta, float valor) {
+		if (valor <= this.saldoContaCorrente) {
+			sacar(valor);
+			outraConta.depositar(valor);
+			System.out.println("Você transferiu R$ " + valor + " para sua conta poupança");
+		} else {
+			System.out.println("Saldo insuficiente para efetuar transferência ");
+		}
 
 	}
 
