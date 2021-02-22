@@ -2,6 +2,16 @@
 public class ContaPoupanca extends Conta {
 	private float saldoContaPoupanca;
 
+	@Override
+	public void exibirDados() {
+		System.out.println("O nome do titular : " + this.getPessoa().getNome());
+		System.out.println("O CPF do titular :  " + this.getPessoa().getCPF());
+		System.out.println("O numero da conta : " + this.getNumero());
+		System.out.println("A sua agencia : " + this.getAgencia());
+		System.out.println("O seu saldo : " + this.saldoContaPoupanca);
+
+	}
+
 	public float getSaldoContaPoupanca() {
 		return saldoContaPoupanca;
 	}
@@ -68,4 +78,5 @@ public class ContaPoupanca extends Conta {
 		}
 
 	}
+	
 }

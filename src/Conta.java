@@ -3,6 +3,8 @@ public abstract class Conta {
 	private int numero;
 	private int agencia;
 	private boolean contaAtiva = false;
+	
+	public abstract void exibirDados();
 
 	public abstract void abrirConta();
 

@@ -10,6 +10,7 @@ public class Principal {
 
 		ContaCorrente cc = new ContaCorrente();
 		ContaPoupanca cp = new ContaPoupanca();
+		
 
 		System.out.println("------------------- JAVA BANK --------------------");
 		do {
@@ -17,6 +18,7 @@ public class Principal {
 					"Seja bem vindo ao banco digital JAVA BANK! Precisamos que você insira alguns dados para nos conhecermos mais! Por favor, digite Seu nome: ");
 			cpf = JOptionPane.showInputDialog("Digite seu CPF: ");
 			Pessoa p1 = new Pessoa(nome, cpf);
+			cc.exibirDados();
 
 			opcao = JOptionPane
 					.showInputDialog("Olá! Verifique os dados que você inseriu e diga se está correto -> Dados: [Nome: "
@@ -159,10 +161,12 @@ public class Principal {
 						cp.transferir(cc, valor);
 					}
 
-					fim = JOptionPane.showInputDialog("Deseja fazer outra operação? (S / N) ");
 				}
-			} while (!fim.equalsIgnoreCase("n"));
 
+				fim = JOptionPane.showInputDialog("Deseja fazer outra operação? (S / N) ");
+			} while (!fim.equalsIgnoreCase("n"));
+		
+		
 		}
 	}
 }

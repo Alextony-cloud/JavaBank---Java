@@ -2,6 +2,7 @@
 public class ContaCorrente extends Conta {
 	private float saldoContaCorrente;
 
+	@Override
 	public void exibirDados() {
 		System.out.println("O nome do titular : " + this.getPessoa().getNome());
 		System.out.println("O CPF do titular :  " + this.getPessoa().getCPF());
